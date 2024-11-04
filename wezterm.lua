@@ -3,12 +3,13 @@
 
   -- This will hold the configuration.
   local config = wezterm.config_builder()
-  config.window_background_opacity = 0.67
+  config.window_background_opacity = 0.88
   -- This is where you actually apply your config choice
   config.font_size = 14
   -- For example, changing the color scheme:
-  config.color_scheme = 'Batman'
-
+  config.color_scheme = 'kanagawabones'
+  config.window_decorations = "RESIZE"
+  config.hide_tab_bar_if_only_one_tab = true
   local act = wezterm.action
   -- config.leader = { key = 'a', mods = 'ALT|SHIFT' }
   config.keys = {
