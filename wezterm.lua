@@ -1,0 +1,44 @@
+  -- Pull in the wezterm API
+  local wezterm = require 'wezterm'
+
+  -- This will hold the configuration.
+  local config = wezterm.config_builder()
+  config.window_background_opacity = 0.67
+  -- This is where you actually apply your config choice
+  config.font_size = 14
+  -- For example, changing the color scheme:
+  config.color_scheme = 'Batman'
+
+  local act = wezterm.action
+  -- config.leader = { key = 'a', mods = 'ALT|SHIFT' }
+  config.keys = {
+  {
+      key = '9',
+      mods = 'CTRL',
+      action = act.PaneSelect {
+        alphabet = '1234567890',
+      }
+    },
+  {
+      key = 'LeftArrow',
+      mods = 'ALT|SHIFT',
+      action = act.AdjustPaneSize { 'Left', 5 },
+  },
+  {
+      key = 'DownArrow',
+      mods = 'ALT|SHIFT',
+      action = act.AdjustPaneSize { 'Down', 5 },
+  },
+  {
+      key = 'UpArrow',
+      mods = 'ALT|SHIFT',
+      action = act.AdjustPaneSize { 'Up', 5 }
+    },
+  {
+      key = 'RightArrow',
+      mods = 'ALT|SHIFT',
+      action = act.AdjustPaneSize { 'Right', 5 },
+      },
+    }
+
+  return config
