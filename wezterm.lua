@@ -3,9 +3,10 @@
 
   -- This will hold the configuration.
   local config = wezterm.config_builder()
-  config.window_background_opacity = 0.88
+  config.window_background_opacity = 0.80
+  config.macos_window_background_blur = 80
   -- This is where you actually apply your config choice
-  config.font_size = 14
+  config.font_size = 14.5
   -- For example, changing the color scheme:
   config.color_scheme = 'kanagawabones'
   config.window_decorations = "RESIZE"
