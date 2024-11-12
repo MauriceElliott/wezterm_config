@@ -1,10 +1,15 @@
   -- Pull in the wezterm API
   local wezterm = require 'wezterm'
-
-  -- This will hold the configuration.
   local config = wezterm.config_builder()
+  local is_macos = wezterm.target_triple:find("darwin") ~= nil
+
+  if is_macos == false then
+      config.default_prog = { 'ubuntu' }
+  end
+  -- This will hold the configuration.
   config.window_background_opacity = 0.67
   config.macos_window_background_blur = 20
+  
   -- This is where you actually apply your config choice
   config.font_size = 14.5
   -- For example, changing the color scheme:
