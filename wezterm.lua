@@ -12,6 +12,8 @@ config.macos_window_background_blur = 20
 
 -- This is where you actually apply your config choice
 config.font_size = 14.5
+config.font = wezterm.font 'CaskaydiaCove Nerd Font'
+-- config.font = wezterm.font 'DepartureMono Nerd Font'
 -- For example, changing the color scheme:
 config.color_scheme = 'kanagawabones'
 config.window_decorations = "RESIZE"
