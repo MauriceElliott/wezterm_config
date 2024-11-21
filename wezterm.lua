@@ -7,13 +7,13 @@ if is_macos == false then
     config.default_prog = { 'ubuntu' }
 end
 -- This will hold the configuration.
-config.window_background_opacity = 0.67
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 10
 
 -- This is where you actually apply your config choice
 config.font_size = 14.5
-config.font = wezterm.font 'CaskaydiaCove Nerd Font'
--- config.font = wezterm.font 'DepartureMono Nerd Font'
+-- config.font = wezterm.font 'CaskaydiaCove Nerd Font'
+config.font = wezterm.font 'DepartureMono Nerd Font'
 -- For example, changing the color scheme:
 config.color_scheme = 'kanagawabones'
 config.window_decorations = "RESIZE"
