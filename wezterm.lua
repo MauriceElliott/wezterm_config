@@ -3,33 +3,30 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 local is_macos = wezterm.target_triple:find("darwin") ~= nil
 
-config.wsl_domains = {
-  {
-    -- The name of this specific domain.  Must be unique amonst all types
-    -- of domain in the configuration file.
-    name = 'WSL:Ubuntu',
-
-    -- The name of the distribution.  This identifies the WSL distribution.
-    -- It must match a valid distribution from your `wsl -l -v` output in
-    -- order for the domain to be useful.
-    distribution = 'Ubuntu',
-  },
-}
-config.default_domain = 'WSL:Ubuntu'
 
 if is_macos == false then
-    config.default_prog = { 'ubuntu' }
+  config.wsl_domains = {
+    {
+      -- The name of this specific domain.  Must be unique amonst all types
+      -- of domain in the configuration file.
+      name = 'WSL:Ubuntu',
+  
+      -- The name of the distribution.  This identifies the WSL distribution.
+      -- It must match a valid distribution from your `wsl -l -v` output in
+      -- order for the domain to be useful.
+      distribution = 'Ubuntu',
+    },
+  }
+  config.default_domain = 'WSL:Ubuntu'
+  config.default_prog = { 'ubuntu' }
+  config.font_size = 11
+else
+  config.macos_window_background_blur = 10
+  config.font_size = 14
 end
--- This will hold the configuration.
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 10
 
--- This is where you actually apply your config choice
-config.font_size = 11
--- config.font = wezterm.font 'CaskaydiaCove Nerd Font'
+config.window_background_opacity = 0.85
 config.font = wezterm.font 'DepartureMono Nerd Font'
--- For example, changing the color scheme:
--- config.color_scheme = 'kanagawabones'
 
 config.colors = {
   foreground = '#DAE3EB',
