@@ -3,6 +3,20 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 local is_macos = wezterm.target_triple:find("darwin") ~= nil
 
+config.wsl_domains = {
+  {
+    -- The name of this specific domain.  Must be unique amonst all types
+    -- of domain in the configuration file.
+    name = 'WSL:Ubuntu',
+
+    -- The name of the distribution.  This identifies the WSL distribution.
+    -- It must match a valid distribution from your `wsl -l -v` output in
+    -- order for the domain to be useful.
+    distribution = 'Ubuntu',
+  },
+}
+config.default_domain = 'WSL:Ubuntu'
+
 if is_macos == false then
     config.default_prog = { 'ubuntu' }
 end
@@ -11,7 +25,7 @@ config.window_background_opacity = 0.85
 config.macos_window_background_blur = 10
 
 -- This is where you actually apply your config choice
-config.font_size = 14.5
+config.font_size = 11
 -- config.font = wezterm.font 'CaskaydiaCove Nerd Font'
 config.font = wezterm.font 'DepartureMono Nerd Font'
 -- For example, changing the color scheme:
@@ -19,42 +33,43 @@ config.font = wezterm.font 'DepartureMono Nerd Font'
 
 config.colors = {
   foreground = '#DAE3EB',
-  background = '#261510',
+  background = '#080703',
   cursor_bg = '#DAE3EB',
   cursor_fg = '#0F2733',
   cursor_border = '#DAE3EB',
   selection_fg = '#DAE3EB',
-  selection_bg = '#9AA0A6',
-  scrollbar_thumb = '#9AA0A6',
-  split = '#7D4433',
+  selection_bg = '#0F2733',
+  scrollbar_thumb = '#080703',
+  split = '#0F2733',
   ansi = {
-    '#0F2733', -- Darkest from GW
-    '#7D4433',  -- Darkened GW 
-    '#5F9E89', -- custom for this
-    '#598046', -- Darkened version of light green
-    '#204254', -- Lighter Dark from GW
-    '#73456B', -- Purple from GW
-    '#507273', -- Custom Teal
-    '#DAE3EB', -- GW White
+    '#0F2733', -- Black
+    '#694D39', -- Red
+    '#5EA331', -- Green
+    '#CC6114', -- Yellow
+    '#2B5A73', -- Blue
+    '#52314C', -- Purple
+    '#57849C', -- Cyan
+    '#9EA5AB', -- White
   },
   brights = {
-    '#9AA0A6', -- darkened GW White
-    '#997154', -- red from GW
-    '#9DC489', -- light green from GW
-    '#DAED61', -- GW Yellow Highlight
-    '#74B0CF', -- GW Blue Highlight
-    '#B881AE', -- GW Purple, light and desaturated.
-    '#53B5E6', -- GW Blue Highlight, but lighter and higher saturation
-    '#E1F0F2', -- brighter GW white
+    '#1B465C', -- Light Black
+    '#997154', -- Light Red
+    '#9DC489', -- light Green
+    '#DAED61', -- Light Yellow
+    '#3A7899', -- Light Blue
+    '#73456B', -- Light Purple
+    '#74B0CF', -- Light Cyan
+    '#DAE3EB', -- Light White
   },
-  compose_cursor = '#CC6114',
-  copy_mode_active_highlight_bg = { Color = '#E1F0F2' },
+  compose_cursor = '#DAED61',
+  copy_mode_active_highlight_bg = { Color = '#DAE3EB' },
   copy_mode_active_highlight_fg = { Color = '#0F2733' },
-  copy_mode_inactive_highlight_bg = { Color = '#7D4433' },
-  copy_mode_inactive_highlight_fg = { Color = '#DAE3EB' },
-  quick_select_label_fg = { Color = '#E1F0F2' },
-  quick_select_match_bg = { Color = '#204254' },
-  quick_select_match_fg = { Color = '#E1F0F2' },
+  copy_mode_inactive_highlight_bg = { Color = '#9EA5AB' },
+  copy_mode_inactive_highlight_fg = { Color = '#1B465C' },
+  quick_select_label_fg = { Color = '#DAE3EB' },
+  quick_select_label_bg = { Color = '#694D39' },
+  quick_select_match_bg = { Color = '#694D39' },
+  quick_select_match_fg = { Color = '#DAE3EB' },
 }
 
 config.window_decorations = "RESIZE"
@@ -108,6 +123,27 @@ config.keys = {
     key = 'DownArrow',
     mods = 'CTRL|SHIFT',
     action = act.ActivatePaneDirection 'Down',
+  },
+  {
+    key = '_',
+    mods = 'SHIFT|ALT',
+    action = wezterm.action.SplitPane {
+      direction = 'Down',
+      size = { Percent = 50 },
+    },
+  },
+  {
+    key = '+',
+    mods = 'SHIFT|ALT',
+    action = wezterm.action.SplitPane {
+      direction = 'Right',
+      size = { Percent = 50 },
+    },
+  },
+    {
+    key = 'w',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.CloseCurrentPane { confirm = false},
   },
 }
 
