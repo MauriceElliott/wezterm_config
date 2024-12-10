@@ -25,7 +25,7 @@ else
   config.font_size = 14
 end
 
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.90
 config.font = wezterm.font 'DepartureMono Nerd Font'
 
 config.colors = {
