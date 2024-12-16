@@ -27,9 +27,8 @@ end
 
 config.window_background_opacity = 0.90
 config.font = wezterm.font 'DepartureMono Nerd Font'
-
 config.colors = {
-  foreground = '#DAE3EB',
+  foreground = '#DFEBF5',
   background = '#080703',
   cursor_bg = '#DAE3EB',
   cursor_fg = '#0F2733',
@@ -41,22 +40,22 @@ config.colors = {
   ansi = {
     '#0F2733', -- Black
     '#694D39', -- Red
-    '#5EA331', -- Green
+    '#72AB4D', -- Green
     '#CC6114', -- Yellow
     '#2B5A73', -- Blue
     '#52314C', -- Purple
-    '#57849C', -- Cyan
-    '#9EA5AB', -- White
+    '#43BFAB', -- Cyan
+    '#C0C7CC', -- White
   },
   brights = {
     '#1B465C', -- Light Black
-    '#997154', -- Light Red
+    '#D9654E', -- Light Red
     '#9DC489', -- light Green
     '#DAED61', -- Light Yellow
-    '#3A7899', -- Light Blue
-    '#73456B', -- Light Purple
+    '#628BC4', -- Light Blue
+    '#C275D1', -- Light Purple
     '#74B0CF', -- Light Cyan
-    '#DAE3EB', -- Light White
+    '#DFEBF5', -- Light White
   },
   compose_cursor = '#DAED61',
   copy_mode_active_highlight_bg = { Color = '#DAE3EB' },
