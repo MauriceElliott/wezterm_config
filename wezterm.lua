@@ -26,7 +26,7 @@ else
 end
 
 config.window_background_opacity = 0.90
-config.font = wezterm.font 'DepartureMono Nerd Font'
+config.font = wezterm.font 'Cascadia Code'
 config.colors = {
   foreground = '#DFEBF5',
   background = '#080703',
@@ -43,17 +43,17 @@ config.colors = {
     '#72AB4D', -- Green
     '#CC6114', -- Yellow
     '#2B5A73', -- Blue
-    '#52314C', -- Purple
+    '#73456B', -- Purple
     '#43BFAB', -- Cyan
-    '#C0C7CC', -- White
+    '#D5DDE3', -- White
   },
   brights = {
     '#1B465C', -- Light Black
-    '#D9654E', -- Light Red
+    '#D4735F', -- Light Red
     '#9DC489', -- light Green
     '#DAED61', -- Light Yellow
     '#628BC4', -- Light Blue
-    '#C275D1', -- Light Purple
+    '#D19BCD', -- Light Purple
     '#74B0CF', -- Light Cyan
     '#DFEBF5', -- Light White
   },
