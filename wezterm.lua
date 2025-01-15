@@ -18,14 +18,14 @@ if is_macos == false then
   }
   config.default_domain = 'WSL:Arch'
   config.default_prog = { 'arch' }
-  config.font_size = 12
+  config.font_size = 13
 else
   config.macos_window_background_blur = 10
   config.font_size = 14
 end
 
 config.window_background_opacity = 1
-config.font = wezterm.font 'CommitMonoAutomata'
+config.font = wezterm.font('Dank Mono', { weight = 'Bold', italic = false })
 config.colors = {
   foreground = '#2B2A2A',
   background = '#DAD4BA',
