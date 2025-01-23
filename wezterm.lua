@@ -24,7 +24,50 @@ else
   config.font_size = 14
 end
 
-config.window_background_opacity = 1
+-- config.window_background_opacity = 80
+-- config.font = wezterm.font('Dank Mono', { weight = 'Bold', italic = false })
+-- config.colors = {
+--   foreground = '#DFEBF5',
+--   background = '#080703',
+--   cursor_bg = '#DAE3EB',
+--   cursor_fg = '#0F2733',
+--   cursor_border = '#DAE3EB',
+--   selection_fg = '#DAE3EB',
+--   selection_bg = '#0F2733',
+--   scrollbar_thumb = '#080703',
+--   split = '#0F2733',
+--   ansi = {
+--     '#0F2733', -- Black
+--     '#694D39', -- Red
+--     '#72AB4D', -- Green
+--     '#CC6114', -- Yellow
+--     '#2B5A73', -- Blue
+--     '#73456B', -- Purple
+--     '#43BFAB', -- Cyan
+--     '#D5DDE3', -- White
+--   },
+--   brights = {
+--     '#1B465C', -- Light Black
+--     '#D4735F', -- Light Red
+--     '#9DC489', -- light Green
+--     '#DAED61', -- Light Yellow
+--     '#628BC4', -- Light Blue
+--     '#D19BCD', -- Light Purple
+--     '#74B0CF', -- Light Cyan
+--     '#DFEBF5', -- Light White
+--   },
+--   compose_cursor = '#DAED61',
+--   copy_mode_active_highlight_bg = { Color = '#DAE3EB' },
+--   copy_mode_active_highlight_fg = { Color = '#0F2733' },
+--   copy_mode_inactive_highlight_bg = { Color = '#9EA5AB' },
+--   copy_mode_inactive_highlight_fg = { Color = '#1B465C' },
+--   quick_select_label_fg = { Color = '#DAE3EB' },
+--   quick_select_label_bg = { Color = '#694D39' },
+--   quick_select_match_bg = { Color = '#694D39' },
+--   quick_select_match_fg = { Color = '#DAE3EB' },
+-- }
+
+config.window_background_opacity = 0.95
 config.font = wezterm.font('Dank Mono', { weight = 'Bold', italic = false })
 config.colors = {
   foreground = '#2B2A2A',
