@@ -8,15 +8,15 @@ if is_macos == false then
     {
       -- The name of this specific domain.  Must be unique amonst all types
       -- of domain in the configuration file.
-      name = 'WSL:Arch',
+      name = 'WSL',
   
       -- The name of the distribution.  This identifies the WSL distribution.
       -- It must match a valid distribution from your `wsl -l -v` output in
       -- order for the domain to be useful.
-      distribution = 'Arch',
+      distribution = 'void',
     },
   }
-  config.default_prog = { 'arch' }
+  config.default_prog = { 'wsl' }
   config.font_size = 13
 else
   config.macos_window_background_blur = 10
