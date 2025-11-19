@@ -10,7 +10,7 @@ config.wsl_domains = {
 config.default_prog = { 'wsl' }
 config.font_size = 11
 
-config.window_background_opacity = 0.99
+config.window_background_opacity = 1
 config.font = wezterm.font('Annotation Mono')
 
 config.window_decorations = "RESIZE"
@@ -98,31 +98,16 @@ config.keys = {
 }
 
 config.color_schemes = {
-  ['Automata'] = {
-    -- The default text color
+  ['Automata Day'] = {
     foreground = '#1F1E1E',
-    -- The default background color
     background = '#DAD4BA',
-
-    -- Overrides the cell background color when the current cell is occupied by the cursor
     cursor_bg = '#33251F',
-    -- Overrides the text color when the current cell is occupied by the cursor
     cursor_fg = '#DAD4BA',
-    -- Specifies the border color of the cursor
     cursor_border = '#33251F',
-
-    -- The foreground color of selected text
     selection_fg = '#1F1E1E',
-    -- The background color of selected text
     selection_bg = '#EBE6D2',
-
-    -- The color of the scrollbar "thumb"; the portion that represents the current viewport
     scrollbar_thumb = '#918E82',
-
-    -- The color of the split lines between panes
     split = '#918E82',
-
-    -- ANSI color palette (standard colors)
     ansi = {
       '#1F1E1E', -- black
       '#52212C', -- red
@@ -133,8 +118,6 @@ config.color_schemes = {
       '#3D6B6B', -- cyan/aqua
       '#CDC8B0', -- white
     },
-
-    -- Bright ANSI colors
     brights = {
       '#33251F', -- bright black
       '#732127', -- bright red
@@ -146,9 +129,40 @@ config.color_schemes = {
       '#EBE6D2', -- bright white
     },
   },
+     ['Automata Night'] = {
+     foreground = '#E0DBC1',
+     background = '#1A1313',
+     cursor_bg = '#FAF4DE',
+     cursor_fg = '#1A1313',
+     cursor_border = '#FAF4DE',
+     selection_fg = '#FAF4DE',
+     selection_bg = '#5C3016',
+     scrollbar_thumb = '#30231E',
+     split = '#30231E',
+     ansi = {
+       '#1A1313', -- black
+       '#B34750', -- red
+       '#6B997B', -- green
+       '#EBA123', -- yellow
+       '#7A97CC', -- blue
+       '#9E7ACC', -- magenta/purple
+       '#4CD6D9', -- cyan/aqua
+       '#E0DBC1', -- white
+     },
+     brights = {
+       '#30231E', -- bright black
+       '#D94B43', -- bright red
+       '#77D989', -- bright green
+       '#FFCA80', -- bright yellow
+       '#61B8F2', -- bright blue
+       '#CC6A84', -- bright magenta/purple
+       '#8DCBCC', -- bright cyan/aqua
+       '#FAF4DE', -- bright white
+     },
+   },
 }
 
 -- Set the color scheme
-config.color_scheme = 'Automata'
+config.color_scheme = 'Automata Night'
 
 return config
