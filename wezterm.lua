@@ -10,7 +10,7 @@ config.wsl_domains = {
 config.default_prog = { 'wsl' }
 config.font_size = 11
 
-config.window_background_opacity = 1
+config.window_background_opacity = 0.85
 config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
 
 config.window_decorations = "RESIZE"
