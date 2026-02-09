@@ -1,18 +1,21 @@
 local wezterm = require 'wezterm'
 local config = {}
 
-config.wsl_domains = {
-  {
-    name = 'WSL',
-    distribution = 'gentoo',
-  },
-}
-config.default_prog = { 'wsl' }
-config.font_size = 11
+if wezterm.target_triple:find("windows") then
+  config.wsl_domains = {
+    {
+      name = 'WSL',
+      distribution = 'gentoo',
+    },
+  }
+  config.default_prog = { 'wsl' }
+end
 
-config.window_background_opacity = 0.85
+config.font_size = 14
+
 config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
 
+config.window_background_opacity = 0.85
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 local act = wezterm.action
