@@ -5,13 +5,14 @@ if wezterm.target_triple:find("windows") then
   config.wsl_domains = {
     {
       name = 'WSL',
-      distribution = 'gentoo',
+      distribution = 'arch',
+      set_environment_variables = { WSLENV = 'PWD' }
     },
   }
   config.default_prog = { 'wsl' }
 end
 
-config.font_size = 14
+config.font_size = 11
 
 config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
 
