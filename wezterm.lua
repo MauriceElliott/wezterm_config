@@ -6,7 +6,6 @@ if wezterm.target_triple:find("windows") then
     {
       name = 'WSL',
       distribution = 'arch',
-      set_environment_variables = { WSLENV = 'PWD' }
     },
   }
   config.default_prog = { 'wsl' }
@@ -14,9 +13,10 @@ end
 
 config.font_size = 11
 
-config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
+-- config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
+config.font = wezterm.font('Maple Mono', { weight = 'Medium'})
 
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.99
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 local act = wezterm.action
