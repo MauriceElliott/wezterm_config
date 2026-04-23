@@ -11,15 +11,15 @@ if wezterm.target_triple:find("windows") then
   config.default_prog = { 'wsl' }
 end
 
-config.font_size = 11
+config.font_size = 12
 
--- config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
+config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
 -- config.font = wezterm.font('Maple Mono', { weight = 'Medium'})
 -- config.font = wezterm.font('Dank Mono', { weight = 'Bold'})
-config.font = wezterm.font('JetBrains Mono', { weight = 'Medium'})
+-- config.font = wezterm.font('JetBrains Mono', { weight = 'Medium'})
 
 
-config.window_background_opacity = 0.99
+config.window_background_opacity = 1.0
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 local act = wezterm.action
@@ -147,7 +147,7 @@ config.color_schemes = {
      scrollbar_thumb = '#30231E',
      split = '#30231E',
      ansi = {
-       '#1A1313', -- black
+       '#3B2B2B', -- black
        '#B34750', -- red
        '#6B997B', -- green
        '#EBA123', -- yellow
@@ -157,7 +157,7 @@ config.color_schemes = {
        '#E0DBC1', -- white
      },
      brights = {
-       '#30231E', -- bright black
+       '#694C4C', -- bright black
        '#D94B43', -- bright red
        '#77D989', -- bright green
        '#FFCA80', -- bright yellow
