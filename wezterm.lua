@@ -19,7 +19,7 @@ config.font_size = 12
 config.font = wezterm.font('JetBrains Mono', { weight = 'Medium'})
 
 
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.8
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 local act = wezterm.action
