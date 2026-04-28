@@ -13,10 +13,10 @@ end
 
 config.font_size = 12
 
-config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
+-- config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
 -- config.font = wezterm.font('Maple Mono', { weight = 'Medium'})
 -- config.font = wezterm.font('Dank Mono', { weight = 'Bold'})
--- config.font = wezterm.font('JetBrains Mono', { weight = 'Medium'})
+config.font = wezterm.font('JetBrains Mono', { weight = 'Medium'})
 
 
 config.window_background_opacity = 1.0
