@@ -11,20 +11,29 @@ if wezterm.target_triple:find("windows") then
   config.default_prog = { 'wsl' }
 end
 
-config.font_size = 12
+config.font_size = 11
 
 -- config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
 -- config.font = wezterm.font('Maple Mono', { weight = 'Medium'})
 -- config.font = wezterm.font('Dank Mono', { weight = 'Bold'})
-config.font = wezterm.font('JetBrains Mono', { weight = 'Medium'})
+config.font = wezterm.font('JetBrains Mono', { weight = 'Light'})
 
 
-config.window_background_opacity = 0.8
+config.window_background_opacity = 1.0
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 local act = wezterm.action
 
 config.keys = {
+  {
+      key = "Enter",
+      mods = "SHIFT",
+      action = act.SendKey
+      {
+            key = "Enter",
+            mods = "SHIFT"
+      }
+  },
   {
       key = '9',
       mods = 'CTRL',
