@@ -16,8 +16,8 @@ config.font_size = 11
 -- config.font = wezterm.font('Annotation Mono', { weight = 'DemiBold' })
 -- config.font = wezterm.font('Maple Mono', { weight = 'Medium'})
 -- config.font = wezterm.font('Dank Mono', { weight = 'Bold'})
-config.font = wezterm.font('JetBrains Mono', { weight = 'Light'})
-
+-- config.font = wezterm.font('JetBrains Mono', { weight = 'Light'})
+config.font = wezterm.font('Nordwand Mono', { weight = 'Medium'})
 
 config.window_background_opacity = 1.0
 config.window_decorations = "RESIZE"
